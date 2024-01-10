@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- written by BS Contact 8.300 -->
+
+
+<X3D profile="Immersive" version="3.0">
+	<head></head>
+	<Scene>
+		<Group>
+			<Transform translation='0 0 0'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='1 1 1'>
+						</Material>
+					</Appearance>
+					<Box size='1.6 0.1 1.6'>
+					</Box>
+				</Shape>
+			</Transform>
+			<Transform translation='0 -0.15 0'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='1 1 1'>
+						</Material>
+					</Appearance>
+					<Box size='1.4 0.2 1.4'>
+					</Box>
+				</Shape>
+			</Transform>
+			<Transform translation='0 0.01 -0.15'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='0.1 0.1 0.4'>
+						</Material>
+					</Appearance>
+					<Box size='1.61 0.1 1.31'>
+					</Box>
+				</Shape>
+			</Transform>
+			<Transform translation='-0.4 0.1 0.5'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='1 1 1'>
+						</Material>
+					</Appearance>
+					<Box size='0.6 0.2 0.4'>
+					</Box>
+				</Shape>
+			</Transform>
+			<Transform translation='0.4 0.1 0.5'>
+				<Shape>
+					<Appearance>
+						<Material diffuseColor='1 1 1'>
+						</Material>
+					</Appearance>
+					<Box size='0.6 0.2 0.4'>
+					</Box>
+				</Shape>
+			</Transform>
+		</Group>
+	</Scene>
+</X3D>
