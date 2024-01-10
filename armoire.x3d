@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Interchange" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+  <Scene>
+    <!-- Armoire -->
+    <Transform translation="0 0 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.5 0.35 0.2"></Material>
+        </Appearance>
+        <Box size="1.5 2 0.5"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Étagères -->
+    <Transform translation="0 -0.5 0.2">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="1.4 0.1 0.4"></Box>
+      </Shape>
+    </Transform>
+
+    <Transform translation="0 0.5 0.2">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="1.4 0.1 0.4"></Box>
+      </Shape>
+    </Transform>
+
+    <Transform translation="0 0 0.21">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="1.4 1.8 0.1"></Box>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
