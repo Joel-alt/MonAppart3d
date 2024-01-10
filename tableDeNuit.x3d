@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Interchange" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+  <Scene>
+    <!-- Table de nuit -->
+    <Transform translation="0 0 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.5 0.35 0.2"></Material>
+        </Appearance>
+        <Box size="0.5 0.5 0.5"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Tiroir bas -->
+    <Transform translation="0 -0.1 0.1">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="0.45 0.15 0.45"></Box>
+      </Shape>
+    </Transform>
+    
+    <!-- Tiroir haut-->
+    <Transform translation="0 0.1 0.1">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="0.45 0.15 0.45"></Box>
+      </Shape>
+    </Transform>
+
+  </Scene>
+</X3D>
