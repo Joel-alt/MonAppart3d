@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Interchange" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+  <Scene>
+
+    <!-- Surface du bureau -->
+    <Transform translation="0 0.35 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="1 1 1"></Material>
+        </Appearance>
+        <Box size="1.3 0.1 0.8"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Tiroir -->
+    <Transform translation="0 0.25 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="1.3 0.1 0.8"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Bouton du tiroir -->
+    <Transform translation="0 0.25 0.4">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.6 0.6 0.6"></Material>
+        </Appearance>
+        <Box size="0.2 0.05 0.05"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Pieds du bureau -->
+    <Transform translation="-0.6 0 -0.35">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="1 1 1"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.7"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <Transform translation="0.6 0 -0.35">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="1 1 1"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.7"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <Transform translation="-0.6 0 0.35">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="1 1 1"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.7"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <Transform translation="0.6 0 0.35">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="1 1 1"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.7"></Cylinder>
+      </Shape>
+    </Transform>
+
+  </Scene>
+</X3D>
