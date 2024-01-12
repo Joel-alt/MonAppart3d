@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Interchange" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+  <Scene>
+    <!-- Assise du canapé -->
+    <Transform translation="0 0.4 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.176 0.176 0.176"></Material>
+        </Appearance>
+        <Box size="2 0.1 0.8"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Dossier du canapé -->
+    <Transform translation="0 0.6 -0.35">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.176 0.176 0.176"></Material>
+        </Appearance>
+        <Box size="2 0.5 0.1"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Accoudoire gauche du canapé -->
+    <Transform translation="-0.95 0.5 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.176 0.176 0.176"></Material>
+        </Appearance>
+        <Box size="0.1 0.25 0.8"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Accoudoire droit du canapé -->
+    <Transform translation="0.95 0.5 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.176 0.176 0.176"></Material>
+        </Appearance>
+        <Box size="0.1 0.25 0.8"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Pieds avant du canapé -->
+    <Transform translation="-0.9 0.25 0.25">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.3"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <Transform translation="0.9 0.25 0.25">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.3"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <!-- Pieds arrière du canapé -->
+    <Transform translation="-0.9 0.25 -0.25">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.3"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <Transform translation="0.9 0.25 -0.25">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.3"></Cylinder>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
