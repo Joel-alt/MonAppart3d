@@ -8,9 +8,19 @@
 </head>
 
 <body>
-    <div id="plan" onclick="moveCamera(event)" style="position: absolute; z-index: 1">
-        <!-- Ajoutez ici le contenu du plan, par exemple une image SVG -->
+    <div id="plan" onclick="moveCamera(event)" style="position: absolute; width: 100%; z-index: 1; display: flex; justify-content: space-between;">
         <img src="plan.png" alt="Plan de l'appartement"  style="height: auto;width: 300px">
+        <div style="background-color: white; padding: 30px;">
+            <p>
+                Commandes :
+                <ul>
+                    <li>Click gauche : avancer</li>
+                    <li>Click droit : reculer</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+        
     </div>
 
     <div id="scene">
