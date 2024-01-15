@@ -8,26 +8,34 @@
 </head>
 
 <body>
-    <div id="plan" onclick="moveCamera(event)" style="position: absolute; width: 100%; z-index: 1; display: flex; justify-content: space-between;">
-        <img src="plan.png" alt="Plan de l'appartement"  style="height: auto;width: 300px">
+    <div id="plan" onclick="moveCamera(event)"
+        style="position: absolute; width: 100%; z-index: 1; display: flex; justify-content: space-between;">
+        <img src="plan.png" alt="Plan de l'appartement" style="height: auto;width: 300px">
+        <div id="metadataDisplay" style="background-color: white; padding: 30px;">
+            <p>
+                Nom: <br>
+                Description: <br>
+                Prix:
+            </p>
+        </div>
         <div style="background-color: white; padding: 30px;">
             <p>
                 Commandes :
-                <ul>
-                    <li>Click gauche : avancer</li>
-                    <li>Click droit : reculer</li>
-                </ul>
+            <ul>
+                <li>Click gauche : avancer</li>
+                <li>Click droit : reculer</li>
+            </ul>
             </p>
         </div>
     </div>
-        
-    </div>
+
 
     <div id="scene">
         <x3d>
             <scene>
                 <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
-                <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266" description="camera"></Viewpoint>
+                <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
+                    description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
 
                 <!-- SOLS -->
@@ -88,13 +96,29 @@
                 </transform>
 
                 <!-- Lit Astryd -->
-                <transform translation='-4.65 0.3 2.9' rotation='0 1 0 -1.5708'>
-                    <inline url="lit.x3d"> </inline>
+                <transform translation='-4.65 0.3 2.9' rotation='0 1 0 -1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="LitAstryd" url="lit.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Lit d'Astryd" />
+                                <MetadataString name="Description" value="C'est le lit d'Astryd" />
+                                <MetadataString name="Price" value="300 euros" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Lit Amel -->
-                <transform translation='1.7 0.3 -4.68' rotation='0 1 0 1.5708'>
-                    <inline url="lit.x3d"> </inline>
+                <transform translation='1.7 0.3 -4.68' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="LitAmel" url="lit.x3d"> 
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Lit d'Amel" />
+                                <MetadataString name="Description" value="C'est le lit d'Amel" />
+                                <MetadataString name="Price" value="400 euros" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Armoire Astryd-->
@@ -229,28 +253,56 @@
             const camera = document.getElementById('camera');
 
             //si le user clique sur la zone salon
-            if(mouseX >43 && mouseX < 130 && mouseY > 77 && mouseY < 169){
-                camera.position= '3.20444 1.5 1.06801';
-                camera.orientation= '-0.11932 0.97382 0.19349 2.04361';
+            if (mouseX > 43 && mouseX < 130 && mouseY > 77 && mouseY < 169) {
+                camera.position = '3.20444 1.5 1.06801';
+                camera.orientation = '-0.11932 0.97382 0.19349 2.04361';
             }
             //si le user clique sur la zone chambre Astryd
-            if(mouseX > 43 && mouseX < 130 && mouseY > 15 && mouseY <=77 ){
-                camera.position= '-2.95071 1.5 6.89617';
-                camera.orientation= '-0.80903 0.58535 0.05324 0.22434';
+            if (mouseX > 43 && mouseX < 130 && mouseY > 15 && mouseY <= 77) {
+                camera.position = '-2.95071 1.5 6.89617';
+                camera.orientation = '-0.80903 0.58535 0.05324 0.22434';
             }
             console.log("x:" + mouseX + " y:" + mouseY)
             //si le user clique sur la zone chambre Amel
-            if(mouseX > 243 && mouseX < 295 && mouseY > 77 && mouseY <169 ){
-                camera.position= '-3.06452 1.5 -2.11215';
-                camera.orientation= '-0.24006 -0.96176 -0.13185 0.92074';
+            if (mouseX > 243 && mouseX < 295 && mouseY > 77 && mouseY < 169) {
+                camera.position = '-3.06452 1.5 -2.11215';
+                camera.orientation = '-0.24006 -0.96176 -0.13185 0.92074';
             }
             //si le user clique sur la zone cuisine
-            if(mouseX > 134 && mouseX < 185 && mouseY > 105 && mouseY <169 ){
-                camera.position= '3.35560 1.5 -1.99173';
-                camera.orientation= '-0.07730 0.99024 0.11598 1.99011';
+            if (mouseX > 134 && mouseX < 185 && mouseY > 105 && mouseY < 169) {
+                camera.position = '3.35560 1.5 -1.99173';
+                camera.orientation = '-0.07730 0.99024 0.11598 1.99011';
+            }
+        }
+
+        function handleClick(event) {
+            const clickedObject = event.target.closest('inline');
+            if (clickedObject) {
+                const metadata = extractMetadata(clickedObject);
+                updateUI(metadata);
+            }
+        }
+
+        function extractMetadata(object) {
+            const metadataNode = object.querySelector('metadata');
+            const metadataSetNode = metadataNode.querySelector('metadataset');
+            const metadata = {};
+
+            if (metadataSetNode) {
+                metadataSetNode.querySelectorAll('MetadataString').forEach((metadataStringNode) => {
+                    const name = metadataStringNode.getAttribute('name');
+                    const value = metadataStringNode.getAttribute('value');
+                    metadata[name] = value;
+                });
             }
 
-            
+            return metadata;
+        }
+
+        function updateUI(metadata) {
+            console.log(metadata);
+            const metadataDisplay = document.getElementById('metadataDisplay');
+            metadataDisplay.innerHTML = `<p>Nom: ${metadata.ObjectName}</p><p>Prix: ${metadata.Price}</p><p>Description: ${metadata.Description}</p>`;
         }
     </script>
 </body>
