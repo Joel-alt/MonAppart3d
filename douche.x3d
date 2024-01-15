@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Interchange" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+  <Scene>
+
+    <!-- Paroi de la douche fond -->
+    <Transform translation="0 1 0">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="1.1 1.8 0.02"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Paroi de la douche droite -->
+    <Transform translation="-0.55 1 0.55">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="0.02 1.8 1.1"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Paroi de la douche gauche -->
+    <Transform translation="0.55 1 0.55">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="0.02 1.8 1.1"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Porte de douche -->
+    <Transform translation="0 1 1.1">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8" transparency="0.5"></Material>
+        </Appearance>
+        <Box size="1.1 1.8 0.02"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Bac de douche -->
+    <Transform translation="0 0.1 0.55">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.8 0.8 0.8"></Material>
+        </Appearance>
+        <Box size="1.1 0.1 1.1"></Box>
+      </Shape>
+    </Transform>
+
+    <!-- Pommeau de douche -->
+    <Transform translation="0 1.5 0.05">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.4 0.4 0.4"></Material>
+        </Appearance>
+        <Cylinder radius="0.05" height="0.2"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <!-- Robinet -->
+    <Transform translation="0 1 0.05">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.4 0.4 0.4"></Material>
+        </Appearance>
+        <Cylinder radius="0.02" height="0.3"></Cylinder>
+      </Shape>
+    </Transform>
+
+    <!-- Poignée de réglage de la température -->
+    <Transform translation="0 1.2 0.05">
+      <Shape>
+        <Appearance>
+          <Material diffuseColor="0.2 0.2 0.2"></Material>
+        </Appearance>
+        <Cylinder radius="0.03" height="0.1"></Cylinder>
+      </Shape>
+    </Transform>
+
+  </Scene>
+</X3D>
