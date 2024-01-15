@@ -16,7 +16,8 @@
     <div id="scene">
         <x3d>
             <scene>
-                <Viewpoint id="camera" position="-7.86343 3.23627 -1.65941" orientation="-0.08553 -0.99409 -0.06683 1.61266" description="camera"></Viewpoint>
+                <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+                <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266" description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
 
                 <!-- SOLS -->
@@ -219,24 +220,24 @@
 
             //si le user clique sur la zone salon
             if(mouseX >43 && mouseX < 130 && mouseY > 77 && mouseY < 169){
-                camera.position= '3.20444 2.59606 1.06801';
+                camera.position= '3.20444 1.5 1.06801';
                 camera.orientation= '-0.11932 0.97382 0.19349 2.04361';
             }
             //si le user clique sur la zone chambre Astryd
             if(mouseX > 43 && mouseX < 130 && mouseY > 15 && mouseY <=77 ){
-                camera.position= '-2.95071 1.75444 6.89617';
+                camera.position= '-2.95071 1.5 6.89617';
                 camera.orientation= '-0.80903 0.58535 0.05324 0.22434';
             }
             console.log("x:" + mouseX + " y:" + mouseY)
             //si le user clique sur la zone chambre Amel
             if(mouseX > 243 && mouseX < 295 && mouseY > 77 && mouseY <169 ){
-                camera.position= '-3.06452 1.69467 -2.11215';
+                camera.position= '-3.06452 1.5 -2.11215';
                 camera.orientation= '-0.24006 -0.96176 -0.13185 0.92074';
             }
             //si le user clique sur la zone cuisine
             if(mouseX > 134 && mouseX < 185 && mouseY > 105 && mouseY <169 ){
-                camera.position= '3.35560 1.59461 -1.99173';
-                camera.orientation= '-0.09697 0.99108 0.09147 2.00063';
+                camera.position= '3.35560 1.5 -1.99173';
+                camera.orientation= '-0.07730 0.99024 0.11598 1.99011';
             }
 
             
