@@ -11,12 +11,12 @@
 
                 <!-- SOLS -->
                 <!-- Grand rectangle -->
-                <transform translation='0 0 0'>
+                <transform translation='0 0 -1'>
                     <shape>
                         <appearance>
                             <material diffuseColor='0.7, 0.5, 0.3'></material>
                         </appearance>
-                        <box size='5 0.1 12'></box>
+                        <box size='5 0.1 14'></box>
                     </shape>
                 </transform>
                 <!-- Petit rectangle -->
@@ -39,6 +39,7 @@
                 </transform>
 
                 <!-- MURS -->
+                <!-- Mur gauche chambre Astryd -->
                 <transform translation='-5.5 1 4'>
                     <shape>
                         <appearance>
@@ -57,12 +58,41 @@
                     </shape>
                 </transform>
 
-                <transform translation='0 1 -6.05'>
+                <transform translation='0 1 -8.05'>
                     <shape>
                         <appearance>
                             <material diffuseColor='1 1 1'></material>
                         </appearance>
                         <box size='5 2 0.1'></box>
+                    </shape>
+                </transform>
+
+                <transform translation='1 1 -1.8'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='3 2 0.1'></box>
+                    </shape>
+                </transform>
+
+                <!-- Mur gauche salle de bain -->
+                <transform translation='0.65 1 -2.75'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 1.8'></box>
+                    </shape>
+                </transform>
+
+                <!-- Mur gauche cuisine -->
+                <transform translation='-0.55 1 -1'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 4.2'></box>
                     </shape>
                 </transform>
 
@@ -72,7 +102,7 @@
                 </transform>
 
                 <!-- Lit Amel -->
-                <transform translation='1.7 0.3 -4.68' rotation='0 1 0 1.5708'>
+                <transform translation='1.7 0.3 -6.68' rotation='0 1 0 1.5708'>
                     <inline url="lit.x3d"> </inline>
                 </transform>
                 
@@ -82,12 +112,12 @@
                 </transform>
 
                 <!-- Armoire Amel 1-->
-                <transform translation='0.25 1 -2.7' rotation='0 1 0 3.1416'>
+                <transform translation='0.25 1.05 -4.9' rotation='0 1 0 3.1416'>
                     <inline url="armoire.x3d"> </inline>
                 </transform>
 
                 <!-- Armoire Amel 2-->
-                <transform translation='1.75 1 -2.7' rotation='0 1 0 3.1416'>
+                <transform translation='1.75 1.05 -4.9' rotation='0 1 0 3.1416'>
                     <inline url="armoire.x3d"> </inline>
                 </transform>
 
@@ -97,7 +127,7 @@
                 </transform>
 
                 <!-- Table de nuit Amel-->
-                <transform translation='2.25 0.3 -5.75' rotation='0 1 0 -1.5708'>
+                <transform translation='2.25 0.3 -7.75' rotation='0 1 0 -1.5708'>
                     <inline url="tableDeNuit.x3d"> </inline>
                 </transform>
 
@@ -107,7 +137,7 @@
                 </transform>
 
                 <!-- Bureau Amel-->
-                <transform translation='-2.1 0.35 -5.3' rotation='0 1 0 1.5708'>
+                <transform translation='-2.1 0.35 -7.3' rotation='0 1 0 1.5708'>
                     <inline url="bureau.x3d"> </inline>
                 </transform>
 
@@ -117,7 +147,7 @@
                 </transform>
 
                 <!-- Chaise de Bureau Amel-->
-                <transform translation='-1.7 0 -5.3' rotation='0 1 0 -1.5708'>
+                <transform translation='-1.7 0 -7.3' rotation='0 1 0 -1.5708'>
                     <inline url="chaiseDeBureau.x3d"> </inline>
                 </transform>
 
@@ -127,7 +157,7 @@
                 </transform>
 
                 <!-- Ordinateur Amel -->
-                <transform translation='-2.35 0.57 -5.3' rotation='0 1 0 1.5708'>
+                <transform translation='-2.35 0.57 -7.3' rotation='0 1 0 1.5708'>
                     <inline url="ordinateur.x3d"> </inline>
                 </transform>
 
@@ -137,7 +167,7 @@
                 </transform>
 
                 <!-- Radiateur Amel-->
-                <transform translation='0 0 -5.9' rotation='0 1 0 3.1416'>
+                <transform translation='0 0 -7.9' rotation='0 1 0 3.1416'>
                     <inline url="radiateur.x3d"> </inline>
                 </transform>
 
@@ -172,28 +202,68 @@
                 </transform>
 
                 <!-- Table Salon -->
-                <transform translation='0.5 0 2.6' rotation='0 1 0 0'>
+                <transform translation='0.5 0 3' rotation='0 1 0 0'>
                     <inline url="tableSalon.x3d"> </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='-0.2 0 2' rotation='0 1 0 0.8'>
+                <transform translation='-0.2 0 2.4' rotation='0 1 0 0.8'>
                     <inline url="chaiseDeBureau.x3d"> </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='1.2 0 2' rotation='0 1 0 -0.8'>
+                <transform translation='1.2 0 2.4' rotation='0 1 0 -0.8'>
                     <inline url="chaiseDeBureau.x3d"> </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='-0.2 0 3.2' rotation='0 1 0 2.3'>
+                <transform translation='-0.2 0 3.6' rotation='0 1 0 2.3'>
                     <inline url="chaiseDeBureau.x3d"> </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='1.2 0 3.2' rotation='0 1 0 -2.3'>
+                <transform translation='1.2 0 3.6' rotation='0 1 0 -2.3'>
                     <inline url="chaiseDeBureau.x3d"> </inline>
+                </transform>
+
+                <!-- Meuble de cusine gauche -->
+                <transform translation='2.25 0.05 0.3' rotation='0 1 0 -1.5708'>
+                    <inline url="meubleCuisineGauche.x3d"> </inline>
+                </transform>
+
+                <!-- Frigo -->
+                <transform translation='2.2 0.05 -1.35' rotation='0 1 0 -1.5708'>
+                    <inline url="frigo.x3d"> </inline>
+                </transform>
+
+                <!-- Evier -->
+                <transform translation='-0.18 0 -1.15' rotation='0 1 0 -1.5708'>
+                    <inline url="evier.x3d"> </inline>
+                </transform>
+
+                <!-- Cuisinière -->
+                <transform translation='-0.18 0 0.05' rotation='0 1 0 1.5708'>
+                    <inline url="cuisiniere.x3d"> </inline>
+                </transform> 
+
+                <!-- Douche -->
+                <transform translation='1.25 0 -1.85' rotation='0 1 0 3.1416'>
+                    <inline url="douche.x3d"> </inline>
+                </transform>
+
+                <!-- Toilettes -->
+                <transform translation='0 0 -2.3 ' rotation='0 1 0 3.1416'>
+                    <inline url="toilettes.x3d"> </inline>
+                </transform>
+
+                <!-- Lavabo -->
+                <transform translation='2.2 0.05 -4' rotation='0 1 0 1.5708'>
+                    <inline url="lavabo.x3d"> </inline>
+                </transform>
+
+                <!-- Machine à Laver -->
+                <transform translation='2.15 0.05 -2.3' rotation='0 1 0 0'>
+                    <inline url="machineAlaver.x3d"> </inline>
                 </transform>
 
             </scene>
