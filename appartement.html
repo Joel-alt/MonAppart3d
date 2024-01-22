@@ -8,25 +8,18 @@
 </head>
 
 <body>
-    <div id="plan" onclick="moveCamera(event)"
-        style="position: absolute; width: 100%; z-index: 1; display: flex; justify-content: space-between;">
+    <div id="plan" onclick="moveCamera(event)" style="position: absolute; z-index: 1">
         <img src="plan.png" alt="Plan de l'appartement" style="height: auto;width: 300px">
-        <div id="metadataDisplay" style="background-color: white; padding: 30px;">
-            <p>
-                Nom: <br>
-                Description: <br>
-                Prix:
-            </p>
-        </div>
-        <div style="background-color: white; padding: 30px;">
-            <p>
-                Commandes :
-            <ul>
-                <li>Click gauche : avancer</li>
-                <li>Click droit : reculer</li>
-            </ul>
-            </p>
-        </div>
+    </div>
+    <div id="metadataDisplay" style="background-color: white; position: absolute; z-index: 1;"></div>
+    <div style="background-color: white; position: absolute; z-index: 1; top: 0; right: 0; padding: 0px 10px;">
+        <p>
+            Commandes :
+        <ul>
+            <li>Click gauche : avancer</li>
+            <li>Click droit : reculer</li>
+        </ul>
+        </p>
     </div>
 
 
@@ -420,6 +413,7 @@
 
     <script type="text/javascript">
         function moveCamera(event) {
+            console.log(event);
             const mouseX = event.clientX;
             const mouseY = event.clientY;
             const camera = document.getElementById('camera');
@@ -451,6 +445,8 @@
             const clickedObject = event.target.closest('inline');
             if (clickedObject) {
                 const metadata = extractMetadata(clickedObject);
+                document.getElementById('metadataDisplay').style.left = event.layerX + 'px';
+                document.getElementById('metadataDisplay').style.top = event.layerY + 'px';
                 updateUI(metadata);
             }
         }
@@ -472,9 +468,8 @@
         }
 
         function updateUI(metadata) {
-            console.log(metadata);
             const metadataDisplay = document.getElementById('metadataDisplay');
-            metadataDisplay.innerHTML = `<p>Nom: ${metadata.ObjectName}</p><p>Prix: ${metadata.Price}</p><p>Description: ${metadata.Description}</p>`;
+            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; padding:0px 10px"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove()">X</button><p>Nom: ${metadata.ObjectName}</p><p>Prix: ${metadata.Price}</p><p>Description: ${metadata.Description}</p><div>`;
         }
     </script>
 </body>
