@@ -33,7 +33,7 @@
     <div id="scene">
         <x3d>
             <scene>
-                <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+                <navigationInfo type='"walk" "any"' id="navType"></navigationInfo> 
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -92,21 +92,15 @@
                 </transform>
 
                 <!-- Murs Salon-->
-                <transform translation='-0.08 1.03 5.95'>
-
-                <transform translation='1 1 -1.8'>
-
+                <transform translation='-0.08 1.02 5.95'>
                     <shape>
                         <appearance>
                             <material diffuseColor='1 1 1'></material>
                         </appearance>
-                        <box size='5.15 1.95 0.1'></box>
+                        <box size='5.15 1.96 0.1'></box>
                     </shape>
                 </transform>
-
-                        <box size='3 2 0.1'></box>
-                    </shape>
-                </transform>
+                
 
                 <!-- Mur gauche salle de bain -->
                 <transform translation='0.65 1 -2.75'>
@@ -116,6 +110,16 @@
                         </appearance>
                         <box size='0.1 2 1.8'></box>
                     </shape>
+                </transform>
+
+                <!-- Mur salle de bain cuisine -->
+                <transform translation='1 1.02 -1.8'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='3 1.96 0.1'></box>
+                    </shape>s
                 </transform>
 
                 <!-- Mur gauche cuisine -->
