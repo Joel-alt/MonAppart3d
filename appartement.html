@@ -26,11 +26,7 @@
     <div id="scene">
         <x3d>
             <scene>
-
-
-                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>  -->
-
-
+                <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -56,7 +52,7 @@
                 </transform>
                 <!-- Balcon -->
                 <transform translation='-4 0 6.5'>
-                     <inline url="balcon.x3d"> </inline>
+                    <inline url="balcon.x3d"> </inline>
                 </transform>
 
                 <!-- MURS -->
@@ -99,7 +95,7 @@
                         <box size='5.15 1.96 0.1'></box>
                     </shape>
                 </transform>
-                
+
 
                 <!-- Mur chambre Amélie et SBD -->
                 <transform translation='0.62 1 -4.65'>
@@ -207,7 +203,7 @@
 
                 <!-- Lit Amel -->
                 <transform translation='1.7 0.3 -6.68' rotation='0 1 0 1.5708' onclick="handleClick(event)">
-                    <inline nameSpaceName="LitAmel" url="lit.x3d"> 
+                    <inline nameSpaceName="LitAmel" url="lit.x3d">
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Lit d'Amel" />
@@ -356,7 +352,7 @@
                 <!-- Cuisinière -->
                 <transform translation='-0.2 0 0.05' rotation='0 1 0 1.5708'>
                     <inline url="cuisiniere.x3d"> </inline>
-                </transform> 
+                </transform>
 
                 <!-- Douche -->
                 <transform translation='1.25 0 -1.85' rotation='0 1 0 3.1416'>
@@ -419,23 +415,33 @@
             const camera = document.getElementById('camera');
 
             //si le user clique sur la zone salon
-            if (mouseX > 43 && mouseX < 130 && mouseY > 77 && mouseY < 169) {
+            if (mouseX > 26 && mouseX < 124 && mouseY > 65 && mouseY < 154) {
                 camera.position = '3.20444 1.5 1.06801';
                 camera.orientation = '-0.11932 0.97382 0.19349 2.04361';
             }
             //si le user clique sur la zone chambre Astryd
-            if (mouseX > 43 && mouseX < 130 && mouseY > 15 && mouseY <= 77) {
+            if (mouseX > 26 && mouseX < 103 && mouseY > 7 && mouseY <= 65) {
                 camera.position = '-2.95071 1.5 6.89617';
                 camera.orientation = '-0.80903 0.58535 0.05324 0.22434';
             }
             console.log("x:" + mouseX + " y:" + mouseY)
             //si le user clique sur la zone chambre Amel
-            if (mouseX > 243 && mouseX < 295 && mouseY > 77 && mouseY < 169) {
-                camera.position = '-3.06452 1.5 -2.11215';
+            if (mouseX > 231 && mouseX < 290 && mouseY > 77 && mouseY < 169) {
+                camera.position = '-2.06805 1.5 -4.60377';
                 camera.orientation = '-0.24006 -0.96176 -0.13185 0.92074';
             }
             //si le user clique sur la zone cuisine
-            if (mouseX > 134 && mouseX < 185 && mouseY > 105 && mouseY < 169) {
+            if (mouseX > 132 && mouseX < 176 && mouseY > 65 && mouseY < 157) {
+                camera.position = '3.35560 1.5 -1.99173';
+                camera.orientation = '-0.07730 0.99024 0.11598 1.99011';
+            }
+            //si le user clique sur la zone couloir
+            if (mouseX > 128 && mouseX < 229 && mouseY > 65 && mouseY < 102) {
+                camera.position = '3.35560 1.5 -1.99173';
+                camera.orientation = '-0.07730 0.99024 0.11598 1.99011';
+            }
+            //si le user clique sur la zone salle de bain
+            if (mouseX > 179 && mouseX < 230 && mouseY > 124 && mouseY < 156) {
                 camera.position = '3.35560 1.5 -1.99173';
                 camera.orientation = '-0.07730 0.99024 0.11598 1.99011';
             }
