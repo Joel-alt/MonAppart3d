@@ -33,7 +33,11 @@
     <div id="scene">
         <x3d>
             <scene>
-                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo> -->
+
+
+                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>  -->
+
+
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -73,6 +77,7 @@
                     </shape>
                 </transform>
 
+                <!-- Mur du fond chambre Astryd -->
                 <transform translation='-4.05 1 2'>
                     <shape>
                         <appearance>
@@ -82,6 +87,7 @@
                     </shape>
                 </transform>
 
+                <!-- Mur du fond chambre Amel -->
                 <transform translation='0 1 -8.05'>
                     <shape>
                         <appearance>
@@ -102,13 +108,23 @@
                 </transform>
                 
 
-                <!-- Mur gauche salle de bain -->
-                <transform translation='0.65 1 -2.75'>
+                <!-- Mur chambre Amélie et SBD -->
+                <transform translation='0.62 1 -4.65'>
                     <shape>
                         <appearance>
                             <material diffuseColor='1 1 1'></material>
                         </appearance>
-                        <box size='0.1 2 1.8'></box>
+                        <box size='3.75 2 0.1'></box>
+                    </shape>
+                </transform>
+
+                <!-- Mur gauche salle de bain -->
+                <transform translation='0.65 1 -2.63'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 1.55'></box>
                     </shape>
                 </transform>
 
@@ -123,12 +139,42 @@
                 </transform>
 
                 <!-- Mur gauche cuisine -->
-                <transform translation='-0.55 1 -1'>
+                <transform translation='-0.55 1 -1.33'>
                     <shape>
                         <appearance>
                             <material diffuseColor='1 1 1'></material>
                         </appearance>
-                        <box size='0.1 2 4.2'></box>
+                        <box size='0.1 2 3.95'></box>
+                    </shape>
+                </transform>
+
+                <!-- Mur gauche chambre Amel -->
+                <transform translation='-2.5 1 -4.85'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 6.5'></box>
+                    </shape>
+                </transform>
+
+                <!-- Mur gauche salon -->
+                <transform translation='-2.5 1 2'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 4.8'></box>
+                    </shape>
+                </transform>
+
+                <!-- Mur droit chambre Astryd -->
+                <transform translation='-2.5 1 5.8'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 0.4'></box>
                     </shape>
                 </transform>
 
@@ -185,12 +231,12 @@
                 </transform>
 
                 <!-- Armoire Amel 1-->
-                <transform translation='0.25 1.05 -4.9' rotation='0 1 0 3.1416'>
+                <transform translation='0.25 1.05 -4.95' rotation='0 1 0 3.1416'>
                     <inline url="armoire.x3d"> </inline>
                 </transform>
 
                 <!-- Armoire Amel 2-->
-                <transform translation='1.75 1.05 -4.9' rotation='0 1 0 3.1416'>
+                <transform translation='1.75 1.05 -4.95' rotation='0 1 0 3.1416'>
                     <inline url="armoire.x3d"> </inline>
                 </transform>
 
@@ -210,7 +256,7 @@
                 </transform>
 
                 <!-- Bureau Amel-->
-                <transform translation='-2.1 0.35 -7.3' rotation='0 1 0 1.5708'>
+                <transform translation='-2 0.35 -7.35' rotation='0 1 0 1.5708'>
                     <inline url="bureau.x3d"> </inline>
                 </transform>
 
@@ -220,7 +266,7 @@
                 </transform>
 
                 <!-- Chaise de Bureau Amel-->
-                <transform translation='-1.7 0 -7.3' rotation='0 1 0 -1.5708'>
+                <transform translation='-1.7 0 -7.35' rotation='0 1 0 -1.5708'>
                     <inline url="chaiseDeBureau.x3d"> </inline>
                 </transform>
 
@@ -230,7 +276,7 @@
                 </transform>
 
                 <!-- Ordinateur Amel -->
-                <transform translation='-2.35 0.57 -7.3' rotation='0 1 0 1.5708'>
+                <transform translation='-2.35 0.57 -7.35' rotation='0 1 0 1.5708'>
                     <inline url="ordinateur.x3d"> </inline>
                 </transform>
 
@@ -270,7 +316,7 @@
                 </transform>
 
                 <!-- Arbre -->
-                <transform translation='-2.2 0 1' rotation='0 1 0 1.5708'>
+                <transform translation='-2.1 0 1' rotation='0 1 0 1.5708'>
                     <inline url="arbre.x3d"> </inline>
                 </transform>
 
@@ -310,12 +356,12 @@
                 </transform>
 
                 <!-- Evier -->
-                <transform translation='-0.18 0 -1.15' rotation='0 1 0 -1.5708'>
+                <transform translation='-0.2 0 -1.15' rotation='0 1 0 -1.5708'>
                     <inline url="evier.x3d"> </inline>
                 </transform>
 
                 <!-- Cuisinière -->
-                <transform translation='-0.18 0 0.05' rotation='0 1 0 1.5708'>
+                <transform translation='-0.2 0 0.05' rotation='0 1 0 1.5708'>
                     <inline url="cuisiniere.x3d"> </inline>
                 </transform> 
 
@@ -338,6 +384,34 @@
                 <transform translation='2.15 0.05 -2.3' rotation='0 1 0 0'>
                     <inline url="machineAlaver.x3d"> </inline>
                 </transform>
+
+                <!-- PORTES -->
+                <!-- Encadrement porte d'entrée-->
+                <transform translation='-2.5 0.05 -1' rotation='0 1 0 0'>
+                    <inline url="encadrementPorte.x3d"> </inline>
+                </transform>
+
+                <!-- Encadrement porte Astryd -->
+                <transform translation='-2.5 0.05 5' rotation='0 1 0 0'>
+                    <inline url="encadrementPorte.x3d"> </inline>
+                </transform>
+
+                <!-- Encadrement porte SDB -->
+                <transform translation='0.65 0.05 -4' rotation='0 1 0 0'>
+                    <inline url="encadrementPorte.x3d"> </inline>
+                </transform>
+
+                <!-- Encadrement porte WC -->
+                <transform translation='0 0.05 -3.35' rotation='0 1 0 1.5708'>
+                    <inline url="encadrementPorte.x3d"> </inline>
+                </transform>
+
+                <!-- Encadrement porte Amélie -->
+                <transform translation='-1.85 0.05 -4.65' rotation='0 1 0 1.5708'>
+                    <inline url="encadrementPorte.x3d"> </inline>
+                </transform>
+
+
 
             </scene>
         </x3d>
