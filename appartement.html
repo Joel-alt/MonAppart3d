@@ -59,12 +59,7 @@
                 </transform>
                 <!-- Balcon -->
                 <transform translation='-4 0 6.5'>
-                    <shape>
-                        <appearance>
-                            <material diffuseColor='0.1 0.5 0.1'></material>
-                        </appearance>
-                        <box size='3 0.1 1'></box>
-                    </shape>
+                     <inline url="balcon.x3d"> </inline>
                 </transform>
 
                 <!-- MURS -->
@@ -96,11 +91,19 @@
                     </shape>
                 </transform>
 
+                <!-- Murs Salon-->
+                <transform translation='-0.08 1.03 5.95'>
+
                 <transform translation='1 1 -1.8'>
+
                     <shape>
                         <appearance>
                             <material diffuseColor='1 1 1'></material>
                         </appearance>
+                        <box size='5.15 1.95 0.1'></box>
+                    </shape>
+                </transform>
+
                         <box size='3 2 0.1'></box>
                     </shape>
                 </transform>
@@ -124,6 +127,7 @@
                         <box size='0.1 2 4.2'></box>
                     </shape>
                 </transform>
+
 
                 <!-- Lit Astryd -->
                 <transform translation='-4.65 0.3 2.9' rotation='0 1 0 -1.5708' onclick="handleClick(event)">
