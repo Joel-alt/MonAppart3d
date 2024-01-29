@@ -716,6 +716,16 @@
                 camera.position = '0.56959 1.65732 -4.27749';
                 camera.orientation = '0.04622 0.99344 0.10456 3.96925';
             }
+            //si le user clique sur la zone toilettes
+            if (mouseX > 179 && mouseX < 205 && mouseY > 110 && mouseY < 128) {
+                camera.position = '-0.46111 1.5 -4.33922';
+                camera.orientation = '0.025 0.5 0.06135 3.47406';
+            }
+            //si le user clique sur la zone balcon
+            if (mouseX > 12 && mouseX < 22 && mouseY > 20 && mouseY < 73) {
+                camera.position = '-1.40703 1.6 7.01909';
+                camera.orientation = '-0.12117 0.98888 0.08624 0.96832';
+            }
         }
 
         function handleClick(event) {
