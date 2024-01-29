@@ -27,7 +27,7 @@
     <div id="scene">
         <x3d>
             <scene>
-                <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+                <!--<navigationInfo type='"walk" "any"' id="navType"></navigationInfo>!-->
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -679,6 +679,11 @@
             if (mouseX > 179 && mouseX < 230 && mouseY > 124 && mouseY < 156) {
                 camera.position = '0.56959 1.65732 -4.27749';
                 camera.orientation = '0.04622 0.99344 0.10456 3.96925';
+            }
+            //si le user clique sur la zone toilettes
+            if (mouseX > 179 && mouseX < 205 && mouseY > 110 && mouseY < 128) {
+                camera.position = '-0.46111 1.5 -4.33922';
+                camera.orientation = '0.025 0.5 0.06135 3.47406';
             }
         }
 
