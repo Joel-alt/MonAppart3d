@@ -5,6 +5,7 @@
     <script type='text/javascript' src='../x3dom/x3dom.js'></script>
     <link rel='stylesheet' type='text/css' href='../x3dom/x3dom.css'>
     </link>
+    <meta charset="utf-8">
 </head>
 
 <body>
@@ -147,7 +148,7 @@
                     </shape>
                 </transform>
 
-                <!-- Mur gauche salon -->
+                <!-- Mur salon /chambre astryd-->
                 <transform translation='-2.5 1 2'>
                     <shape>
                         <appearance>
@@ -167,6 +168,51 @@
                     </shape>
                 </transform>
 
+                 <!-- Mur Salon & SDB-->
+                 <!--Bas-->
+                <transform translation='2.545 0.514 0.65'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 1.13 10.7'></box>
+                    </shape>
+                </transform>
+                <!--Hauts-->
+                <transform translation='2.545 1.516 5.45'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 0.965 1.1'></box>
+                    </shape>
+                </transform>
+                <transform translation='2.545 1.516 1.425'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 0.965 1.76'></box>
+                    </shape>
+                </transform>
+                <transform translation='2.545 1.516 -1.25'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 0.965 1.81'></box>
+                    </shape>
+                </transform>
+                <transform translation='2.545 1.516 -3.87'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 0.965 1.65'></box>
+                    </shape>
+                </transform>
+
+                <!--FENETRES-->
                 <!-- Fenetre Cuisine -->
                 <transform translation='3.1 0.5 1' rotation='0 1 0 1.5708'>
                     <inline url="fenetre.x3d"> </inline>
@@ -194,8 +240,6 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Lit d'Astryd" />
-                                <MetadataString name="Description" value="C'est le lit d'Astryd" />
-                                <MetadataString name="Price" value="300 euros" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -206,172 +250,363 @@
                     <inline nameSpaceName="LitAmel" url="lit.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Lit d'Amel" />
-                                <MetadataString name="Description" value="C'est le lit d'Amel" />
-                                <MetadataString name="Price" value="400 euros" />
+                                <MetadataString name="ObjectName" value="Lit d'Amélie" />
                             </MetadataSet>
                         </metadata>
                     </inline>
                 </transform>
 
                 <!-- Armoire Astryd-->
-                <transform translation='-5.2 1 4.95' rotation='0 1 0 1.5708'>
-                    <inline url="armoire.x3d"> </inline>
+                <transform translation='-5.2 1 4.95' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="ArmoireAstryd" url="armoire.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Armoire d'Astryd" onclick="handleClick(event)"/>
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
-                <!-- Armoire Amel 1-->
-                <transform translation='0.25 1.05 -4.95' rotation='0 1 0 3.1416'>
-                    <inline url="armoire.x3d"> </inline>
+                <!-- Armoire Amel Droite-->
+                <transform translation='0.25 1.05 -4.95' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="ArmoireDroiteAmel" url="armoire.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Armoire d'Amélie Droite" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
-                <!-- Armoire Amel 2-->
-                <transform translation='1.75 1.05 -4.95' rotation='0 1 0 3.1416'>
-                    <inline url="armoire.x3d"> </inline>
+                <!-- Armoire Amel Gauche-->
+                <transform translation='1.75 1.05 -4.95' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="ArmoireGaucheAmel" url="armoire.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Armoire d'Amélie Gauche" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Table de nuit Astryd-->
-                <transform translation='-5.2 0.3 3.95' rotation='0 1 0 1.5708'>
-                    <inline url="tableDeNuit.x3d"> </inline>
+                <transform translation='-5.2 0.3 3.95' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="TableDeNuitAstryd" url="tableDeNuit.x3d"> 
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd. Toujours bien rangée !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Table de nuit Amel-->
-                <transform translation='2.25 0.3 -7.75' rotation='0 1 0 -1.5708'>
-                    <inline url="tableDeNuit.x3d"> </inline>
+                <transform translation='2.25 0.3 -7.75' rotation='0 1 0 -1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="TableDeNuitAmel"  url="tableDeNuit.x3d"> 
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Table de nuit d'Amélie" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Bureau Astryd-->
-                <transform translation='-3.2 0.35 2.5' rotation='0 1 0 0'>
-                    <inline url="bureau.x3d"> </inline>
+                <transform translation='-3.2 0.35 2.5' rotation='0 1 0 0' onclick="handleClick(event)">
+                    <inline nameSpaceName="BureauAstryd"  url="bureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd pour travailler WEB et 3D" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Bureau Amel-->
-                <transform translation='-2 0.35 -7.35' rotation='0 1 0 1.5708'>
-                    <inline url="bureau.x3d"> </inline>
+                <transform translation='-2 0.35 -7.35' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="BureauAmel"   url="bureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd pour travailler jusqu'à 4 heures du matin" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Chaise de Bureau Astryd-->
-                <transform translation='-3.2 0 2.9' rotation='0 1 0 3.1416'>
-                    <inline url="chaiseDeBureau.x3d"> </inline>
+                <transform translation='-3.2 0 2.9' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="ChaiseBureauAstryd" url="chaiseDeBureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Chaise de bureau d'Astryd. Bien confortable !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Chaise de Bureau Amel-->
-                <transform translation='-1.7 0 -7.35' rotation='0 1 0 -1.5708'>
-                    <inline url="chaiseDeBureau.x3d"> </inline>
+                <transform translation='-1.7 0 -7.35' rotation='0 1 0 -1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="ChaiseBureauAmel"  url="chaiseDeBureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Chaise de bureau d'Amélie. Bien confortable !" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Ordinateur Astryd -->
-                <transform translation='-3.2 0.57 2.25' rotation='0 1 0 0'>
-                    <inline url="ordinateur.x3d"> </inline>
+                <transform translation='-3.2 0.57 2.25' rotation='0 1 0 0' onclick="handleClick(event)">
+                    <inline nameSpaceName="OrdinateurAstryd" url="ordinateur.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Ordinateur d'Astryd. Penser à le charger !" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Ordinateur Amel -->
-                <transform translation='-2.35 0.57 -7.35' rotation='0 1 0 1.5708'>
-                    <inline url="ordinateur.x3d"> </inline>
+                <transform translation='-2.35 0.57 -7.35' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="OrdinateurAmel" url="ordinateur.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Ordinateur d'Amélie" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Radiateur Astryd-->
-                <transform translation='-4.8 0 5.9' rotation='0 1 0 3.1416'>
-                    <inline url="radiateur.x3d"> </inline>
+                <transform translation='-4.8 0 5.9' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="RadiateurAstryd" url="radiateur.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Radiateur ! C'est mieux quand il fonctionne" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Radiateur Amel-->
-                <transform translation='0 0 -7.9' rotation='0 1 0 3.1416'>
-                    <inline url="radiateur.x3d"> </inline>
+                <transform translation='0 0 -7.9' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="RadiateurAmel" url="radiateur.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Radiateur" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Radiateur Salon-->
-                <transform translation='2.45 0 4.7' rotation='0 1 0 1.5708'>
-                    <inline url="radiateur.x3d"> </inline>
+                <transform translation='2.45 0 4.7' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="RadiateurSalon" url="radiateur.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Radiateur" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Canapé -->
-                <transform translation='0 -0.1 5.5' rotation='0 1 0 3.1416'>
-                    <inline url="canape.x3d"> </inline>
+                <transform translation='0 -0.1 5.5' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="Canape" url="canape.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Canapé pour faire la sieste" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Fauteuil -->
-                <transform translation='1.8 -0.1 5.2' rotation='0 1 0 -2.6416'>
-                    <inline url="fauteuil.x3d"> </inline>
+                <transform translation='1.8 -0.1 5.2' rotation='0 1 0 -2.6416' onclick="handleClick(event)">
+                    <inline nameSpaceName="Fauteuil" url="fauteuil.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Fauteuil pour faire la sieste" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Meuble télé -->
-                <transform translation='-2.25 0 2.7' rotation='0 1 0 1.5708'>
-                    <inline url="meubleTele.x3d"> </inline>
+                <transform translation='-2.25 0 2.7' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="MeubleTele" url="meubleTele.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Meuble pour la télévision" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Télé -->
-                <transform translation='-2.25 0.6 2.7' rotation='0 1 0 1.5708'>
-                    <inline url="tele.x3d"> </inline>
+                <transform translation='-2.25 0.6 2.7' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="Tele" url="tele.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Télévision : Ce soir il y a Koh Lanta ! " />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Arbre -->
-                <transform translation='-2.1 0 1' rotation='0 1 0 1.5708'>
-                    <inline url="arbre.x3d"> </inline>
+                <transform translation='-2.1 0 1' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="Arbre" url="arbre.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Arbre : c'est aussi un sapin de Noël en décembre !" />
+                            </MetadataSet>
+                        </metadata> 
+                    </inline>
                 </transform>
 
                 <!-- Table Salon -->
-                <transform translation='0.5 0 3' rotation='0 1 0 0'>
-                    <inline url="tableSalon.x3d"> </inline>
+                <transform translation='0.5 0 3' rotation='0 1 0 0' onclick="handleClick(event)">
+                    <inline nameSpaceName="TableSalon" url="tableSalon.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Table du salon : l'élément central !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='-0.2 0 2.4' rotation='0 1 0 0.8'>
-                    <inline url="chaiseDeBureau.x3d"> </inline>
+                <transform translation='-0.2 0 2.4' rotation='0 1 0 0.8' onclick="handleClick(event)">
+                    <inline url="chaiseDeBureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='1.2 0 2.4' rotation='0 1 0 -0.8'>
-                    <inline url="chaiseDeBureau.x3d"> </inline>
+                <transform translation='1.2 0 2.4' rotation='0 1 0 -0.8' onclick="handleClick(event)">
+                    <inline nameSpaceName="ChaiseSalon" url="chaiseDeBureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='-0.2 0 3.6' rotation='0 1 0 2.3'>
-                    <inline url="chaiseDeBureau.x3d"> </inline>
+                <transform translation='-0.2 0 3.6' rotation='0 1 0 2.3' onclick="handleClick(event)">
+                    <inline nameSpaceName="ChaiseSalon" url="chaiseDeBureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Chaise de Salon-->
-                <transform translation='1.2 0 3.6' rotation='0 1 0 -2.3'>
-                    <inline url="chaiseDeBureau.x3d"> </inline>
+                <transform translation='1.2 0 3.6' rotation='0 1 0 -2.3' onclick="handleClick(event)">
+                    <inline nameSpaceName="ChaiseSalon" url="chaiseDeBureau.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Meuble de cusine gauche -->
-                <transform translation='2.25 0.05 0.3' rotation='0 1 0 -1.5708'>
-                    <inline url="meubleCuisineGauche.x3d"> </inline>
+                <transform translation='2.25 0.05 0.3' rotation='0 1 0 -1.5708' scale='1 0.85 1' onclick="handleClick(event)">
+                    <inline nameSpaceName="MeubleCuisineGauche" url="meubleCuisineGauche.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Meuble de cuisine" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Frigo -->
-                <transform translation='2.2 0.05 -1.35' rotation='0 1 0 -1.5708'>
-                    <inline url="frigo.x3d"> </inline>
+                <transform translation='2.2 0.05 -1.35' rotation='0 1 0 -1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="Frigo" url="frigo.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Réfrigirateur : c'est mieux quand il est plein !" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Evier -->
-                <transform translation='-0.2 0 -1.15' rotation='0 1 0 -1.5708'>
-                    <inline url="evier.x3d"> </inline>
+                <transform translation='-0.2 0 -1.15' rotation='0 1 0 -1.5708' scale='1 0.85 1' onclick="handleClick(event)">
+                    <inline nameSpaceName="Evier" url="evier.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Evier" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Cuisinière -->
-                <transform translation='-0.2 0 0.05' rotation='0 1 0 1.5708'>
-                    <inline url="cuisiniere.x3d"> </inline>
-                </transform>
+
+                <transform translation='-0.2 0 0.05' rotation='0 1 0 1.5708' scale='1 0.85 1' onclick="handleClick(event)">
+                    <inline nameSpaceName="Cuisiniere" url="cuisiniere.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Cuisinière : pour faire cuire des bons petits plats" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
+                </transform> 
 
                 <!-- Douche -->
-                <transform translation='1.25 0 -1.85' rotation='0 1 0 3.1416'>
-                    <inline url="douche.x3d"> </inline>
+                <transform translation='1.25 0 -1.85' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="Douche" url="douche.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Douche" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Toilettes -->
-                <transform translation='0 0 -2.3 ' rotation='0 1 0 3.1416'>
-                    <inline url="toilettes.x3d"> </inline>
+                <transform translation='0 0 -2.3 ' rotation='0 1 0 3.1416' onclick="handleClick(event)">
+                    <inline nameSpaceName="WC" url="toilettes.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Toilettes" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Lavabo -->
-                <transform translation='2.2 0.05 -4' rotation='0 1 0 1.5708'>
-                    <inline url="lavabo.x3d"> </inline>
+                <transform translation='2.2 0.05 -4' rotation='0 1 0 1.5708' onclick="handleClick(event)">
+                    <inline nameSpaceName="Lavabo" url="lavabo.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Lavabo" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- Machine à Laver -->
-                <transform translation='2.15 0.05 -2.3' rotation='0 1 0 0'>
-                    <inline url="machineAlaver.x3d"> </inline>
+                <transform translation='2.15 0.05 -2.3' rotation='0 1 0 0' scale='1 0.85 1' onclick="handleClick(event)">
+                    <inline nameSpaceName="Machine" url="machineAlaver.x3d">
+                        <metadata>
+                            <MetadataSet>
+                                <MetadataString name="ObjectName" value="Machine à laver le linge" />
+                            </MetadataSet>
+                        </metadata>
+                    </inline>
                 </transform>
 
                 <!-- PORTES -->
@@ -475,7 +710,7 @@
 
         function updateUI(metadata) {
             const metadataDisplay = document.getElementById('metadataDisplay');
-            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; padding:0px 10px"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove()">X</button><p>Nom: ${metadata.ObjectName}</p><p>Prix: ${metadata.Price}</p><p>Description: ${metadata.Description}</p><div>`;
+            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; padding:0px 10px"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove()">X</button><p>${metadata.ObjectName}</p><div>`;
         }
     </script>
 </body>
