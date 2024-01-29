@@ -27,7 +27,7 @@
     <div id="scene">
         <x3d>
             <scene>
-                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo> -->
+                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>-->
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -78,12 +78,39 @@
                 </transform>
 
                 <!-- Mur du fond chambre Amel -->
-                <transform translation='0 1 -8.05'>
+                <transform translation='-1.5 1 -8.05'>
                     <shape>
                         <appearance>
                             <material diffuseColor='1 1 1'></material>
                         </appearance>
-                        <box size='5 2 0.1'></box>
+                        <box size='2.1 2 0.1'></box>
+                    </shape>
+                </transform>
+                <transform translation='1.5 1 -8.05'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='2.15 2 0.1'></box>
+                    </shape>
+                </transform>
+                <transform translation='0 0.538 -8.05'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='1 1.08 0.1'></box>
+                    </shape>
+                </transform>
+               
+
+                <!-- Mur Chambre Amel Lit-->
+                <transform translation='2.545 1 -6.35'>
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='1 1 1'></material>
+                        </appearance>
+                        <box size='0.1 2 3.5'></box>
                     </shape>
                 </transform>
 
@@ -212,6 +239,8 @@
                     </shape>
                 </transform>
 
+                
+
                 <!--FENETRES-->
                 <!-- Fenetre Cuisine -->
                 <transform translation='3.1 0.5 1' rotation='0 1 0 1.5708'>
@@ -233,6 +262,13 @@
                 <transform translation='3.1 0.5 -1.7' rotation='0 1 0 1.5708'>
                     <inline url="fenetre.x3d"> </inline>
                 </transform>
+
+                <!-- Fenetre Chambre Amélie -->
+                <transform translation='0.88 0.5 -8.6' rotation='0 1 0 3.1416'>
+                    <inline url="fenetre.x3d"> </inline>
+                </transform>
+
+                
 
                 <!-- Lit Astryd -->
                 <transform translation='-4.65 0.3 2.9' rotation='0 1 0 -1.5708' onclick="handleClick(event)">
@@ -713,6 +749,16 @@
             if (mouseX > 179 && mouseX < 230 && mouseY > 124 && mouseY < 156) {
                 camera.position = '0.56959 1.65732 -4.27749';
                 camera.orientation = '0.04622 0.99344 0.10456 3.96925';
+            }
+            //si le user clique sur la zone toilettes
+            if (mouseX > 179 && mouseX < 205 && mouseY > 110 && mouseY < 128) {
+                camera.position = '-0.46111 1.5 -4.33922';
+                camera.orientation = '0.025 0.5 0.06135 3.47406';
+            }
+            //si le user clique sur la zone balcon
+            if (mouseX > 12 && mouseX < 22 && mouseY > 20 && mouseY < 73) {
+                camera.position = '-1.40703 1.6 7.01909';
+                camera.orientation = '-0.12117 0.98888 0.08624 0.96832';
             }
         }
 
