@@ -27,7 +27,7 @@
     <div id="scene">
         <x3d>
             <scene>
-                <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>
+                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo> -->
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -240,6 +240,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Lit d'Astryd" />
+                                <MetadataString name="Description" value="Au dodo !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -251,6 +252,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Lit d'Amélie" />
+                                <MetadataString name="Description" value="Très moelleux  !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -261,7 +263,8 @@
                     <inline nameSpaceName="ArmoireAstryd" url="armoire.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Armoire d'Astryd" onclick="handleClick(event)"/>
+                                <MetadataString name="ObjectName" value="Armoire d'Astryd"/>
+                                <MetadataString name="Description" value="Penser à ranger !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -273,6 +276,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Armoire d'Amélie Droite" />
+                                <MetadataString name="Description" value="Toujours bien rangée !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -284,6 +288,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Armoire d'Amélie Gauche" />
+                                <MetadataString name="Description" value="Ici c'est pour les manteaux !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -295,6 +300,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Table de nuit d'Astryd. Toujours bien rangée !" />
+                                <MetadataString name="Description" value="Il faudrait mettre un réveille dessus" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -306,6 +312,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Table de nuit d'Amélie" />
+                                <MetadataString name="Description" value="Pour poser le téléphone" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -316,7 +323,8 @@
                     <inline nameSpaceName="BureauAstryd"  url="bureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd pour travailler WEB et 3D" />
+                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd" />
+                                <MetadataString name="Description" value="Pour travailler WEB et 3D" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -327,7 +335,8 @@
                     <inline nameSpaceName="BureauAmel"   url="bureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd pour travailler jusqu'à 4 heures du matin" />
+                                <MetadataString name="ObjectName" value="Table de nuit d'Astryd" />
+                                <MetadataString name="Description" value="Pour travailler jusqu'à 4 heures du matin" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -338,7 +347,8 @@
                     <inline nameSpaceName="ChaiseBureauAstryd" url="chaiseDeBureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Chaise de bureau d'Astryd. Bien confortable !" />
+                                <MetadataString name="ObjectName" value="Chaise de bureau d'Astryd" />
+                                <MetadataString name="Description" value="Bien confortable !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -349,7 +359,8 @@
                     <inline nameSpaceName="ChaiseBureauAmel"  url="chaiseDeBureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Chaise de bureau d'Amélie. Bien confortable !" />
+                                <MetadataString name="ObjectName" value="Chaise de bureau d'Amélie" />
+                                <MetadataString name="Description" value="Bien confortable !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -360,7 +371,8 @@
                     <inline nameSpaceName="OrdinateurAstryd" url="ordinateur.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Ordinateur d'Astryd. Penser à le charger !" />
+                                <MetadataString name="ObjectName" value="Ordinateur d'Astryd" />
+                                <MetadataString name="Description" value="Penser à le charger !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -372,6 +384,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Ordinateur d'Amélie" />
+                                <MetadataString name="Description" value="Penser à le charger !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -382,7 +395,8 @@
                     <inline nameSpaceName="RadiateurAstryd" url="radiateur.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Radiateur ! C'est mieux quand il fonctionne" />
+                                <MetadataString name="ObjectName" value="Radiateur" />
+                                <MetadataString name="Description" value="C'est mieux quand il fonctionne !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -394,6 +408,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Radiateur" />
+                                <MetadataString name="Description" value="C'est mieux quand il fonctionne !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -405,6 +420,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Radiateur" />
+                                <MetadataString name="Description" value="C'est mieux quand il fonctionne !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -415,7 +431,8 @@
                     <inline nameSpaceName="Canape" url="canape.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Canapé pour faire la sieste" />
+                                <MetadataString name="ObjectName" value="Canapé" />
+                                <MetadataString name="Description" value="Pour faire les meilleures siestes !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -426,7 +443,8 @@
                     <inline nameSpaceName="Fauteuil" url="fauteuil.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Fauteuil pour faire la sieste" />
+                                <MetadataString name="ObjectName" value="Fauteuil" />
+                                <MetadataString name="Description" value="Pour chiller avec une tisane !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -438,6 +456,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Meuble pour la télévision" />
+                                <MetadataString name="Description" value="Pour ne pas poser la télévision au sol !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -448,7 +467,8 @@
                     <inline nameSpaceName="Tele" url="tele.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Télévision : Ce soir il y a Koh Lanta ! " />
+                                <MetadataString name="ObjectName" value="Télévision" />
+                                <MetadataString name="Description" value="Ce soir il y a Koh Lanta !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -459,7 +479,8 @@
                     <inline nameSpaceName="Arbre" url="arbre.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Arbre : c'est aussi un sapin de Noël en décembre !" />
+                                <MetadataString name="ObjectName" value="Ficus" />
+                                <MetadataString name="Description" value="C'est aussi un ficus de Noël en décembre !" />
                             </MetadataSet>
                         </metadata> 
                     </inline>
@@ -470,7 +491,8 @@
                     <inline nameSpaceName="TableSalon" url="tableSalon.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Table du salon : l'élément central !" />
+                                <MetadataString name="ObjectName" value="Table du salon" />
+                                <MetadataString name="Description" value="L'élément central !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -481,7 +503,8 @@
                     <inline url="chaiseDeBureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                                <MetadataString name="ObjectName" value="Chaise de salon " />
+                                <MetadataString name="Description" value="Il faut bien s'assoire !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -492,7 +515,8 @@
                     <inline nameSpaceName="ChaiseSalon" url="chaiseDeBureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                                <MetadataString name="ObjectName" value="Chaise de salon " />
+                                <MetadataString name="Description" value="Il faut bien s'assoire !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -503,7 +527,8 @@
                     <inline nameSpaceName="ChaiseSalon" url="chaiseDeBureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                                <MetadataString name="ObjectName" value="Chaise de salon " />
+                                <MetadataString name="Description" value="Il faut bien s'assoire !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -514,7 +539,8 @@
                     <inline nameSpaceName="ChaiseSalon" url="chaiseDeBureau.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Chaise de salon : faut bien s'assoire !" />
+                                <MetadataString name="ObjectName" value="Chaise de salon " />
+                                <MetadataString name="Description" value="Il faut bien s'assoire !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -526,6 +552,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Meuble de cuisine" />
+                                <MetadataString name="Description" value="Un beau plan de travail !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -536,7 +563,8 @@
                     <inline nameSpaceName="Frigo" url="frigo.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Réfrigirateur : c'est mieux quand il est plein !" />
+                                <MetadataString name="ObjectName" value="Réfrigirateur" />
+                                <MetadataString name="Description" value="C'est mieux quand il est plein !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -548,6 +576,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Evier" />
+                                <MetadataString name="Description" value="Note : faire la vaiselle" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -559,7 +588,8 @@
                     <inline nameSpaceName="Cuisiniere" url="cuisiniere.x3d">
                         <metadata>
                             <MetadataSet>
-                                <MetadataString name="ObjectName" value="Cuisinière : pour faire cuire des bons petits plats" />
+                                <MetadataString name="ObjectName" value="Cuisinière" />
+                                <MetadataString name="Description" value="Pour faire cuire des bons petits plats" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -571,6 +601,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Douche" />
+                                <MetadataString name="Description" value="Tout propre !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -582,6 +613,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Toilettes" />
+                                <MetadataString name="Description" value="Occupé !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -593,6 +625,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Lavabo" />
+                                <MetadataString name="Description" value="Il est beau mon lavabo !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -604,6 +637,7 @@
                         <metadata>
                             <MetadataSet>
                                 <MetadataString name="ObjectName" value="Machine à laver le linge" />
+                                <MetadataString name="Description" value="Promis elle ne fait pas trop de bruit !" />
                             </MetadataSet>
                         </metadata>
                     </inline>
@@ -710,7 +744,7 @@
 
         function updateUI(metadata) {
             const metadataDisplay = document.getElementById('metadataDisplay');
-            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; padding:0px 10px"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove()">X</button><p>${metadata.ObjectName}</p><div>`;
+            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; text-align: center; padding:10px 10px; max-width: 10vw"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove()">X</button><p style="font-weight: bold">${metadata.ObjectName}</p><p>${metadata.Description}</p><div>`;
         }
     </script>
 </body>
