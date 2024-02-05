@@ -14,8 +14,12 @@
     </div>
     <div id="metadataDisplay" style="background-color: white; position: absolute; z-index: 1;"></div>
     <div style="background-color: white; position: absolute; z-index: 1; top: 0; right: 0; padding: 0px 10px;">
+        <select style="margin-top: 20px;" onchange="setNavigation()" id="selectNav">
+            <option value="examine">Examine</option>
+            <option value="walk">Walk</option>
+        </select>
         <p>
-            Commandes :
+            Commandes en mode walk:
         <ul>
             <li>Click gauche : avancer</li>
             <li>Click droit : reculer</li>
@@ -27,7 +31,7 @@
     <div id="scene">
         <x3d>
             <scene>
-                <!-- <navigationInfo type='"walk" "any"' id="navType"></navigationInfo>-->
+                <navigationInfo type="examine" id="navType"></navigationInfo>
                 <Viewpoint id="camera" position="-5 1.5 -1" orientation="-0.08553 -0.99409 -0.06683 1.61266"
                     description="camera"></Viewpoint>
                 <background id="bg" skyColor="0.8 0.9 1.0"></background>
@@ -863,6 +867,13 @@
             metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; text-align: center; padding:10px 10px; max-width: 10vw"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove();itemTocColor.forEach((item) => {
                         item.emissiveColor = '0 0 0';
                     });">X</button><p style="font-weight: bold">${metadata.ObjectName}</p><p>${metadata.Description}</p><div>`;
+        }
+
+        function setNavigation() {
+            let e = document.getElementById("selectNav");
+            let text = e.options[e.selectedIndex].text;
+            document.getElementById('navType').setAttribute('type', text);
+            console.log(text);
         }
     </script>
 </body>
