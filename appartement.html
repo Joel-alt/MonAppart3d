@@ -713,6 +713,7 @@
 
 
     <script type="text/javascript">
+        var itemTocColor = [];
         function moveCamera(event) {
             console.log(event);
             const mouseX = event.clientX;
@@ -764,6 +765,15 @@
 
         function handleClick(event) {
             const clickedObject = event.target.closest('inline');
+            if(itemTocColor.length > 0){
+                itemTocColor.forEach((item) => {
+                    item.emissiveColor = '0 0 0';
+                });
+            }
+            itemTocColor = clickedObject.querySelectorAll('Material');
+            itemTocColor.forEach((item) => {
+                item.emissiveColor = '0 0.5 0.5';
+            });
             if (clickedObject) {
                 const metadata = extractMetadata(clickedObject);
                 document.getElementById('metadataDisplay').style.left = event.layerX + 'px';
@@ -790,7 +800,9 @@
 
         function updateUI(metadata) {
             const metadataDisplay = document.getElementById('metadataDisplay');
-            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; text-align: center; padding:10px 10px; max-width: 10vw"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove()">X</button><p style="font-weight: bold">${metadata.ObjectName}</p><p>${metadata.Description}</p><div>`;
+            metadataDisplay.innerHTML = `<div id="metadataContent" style="display:flex; flex-direction:column; text-align: center; padding:10px 10px; max-width: 10vw"><button style="align-self:flex-end" onclick="document.getElementById('metadataContent').remove();itemTocColor.forEach((item) => {
+                        item.emissiveColor = '0 0 0';
+                    });">X</button><p style="font-weight: bold">${metadata.ObjectName}</p><p>${metadata.Description}</p><div>`;
         }
     </script>
 </body>
